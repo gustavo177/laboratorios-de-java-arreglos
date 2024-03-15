@@ -28,8 +28,16 @@ public class EjercicioSistemaEstadisticoDeUnArreglo {
                     contadorDeNegativos++;
                 }
             }
-            System.out.println("promedio de los números positivos = " + sumaPositivo/contadorDePositivos);
-            System.out.println("promedio de los números negativos = " + -(sumaNegativo/contadorDeNegativos));
+            if(contadorDePositivos == 0) {
+                System.out.println("El promedio de los números positivos no se puedo calcular porque su divisor es cero");
+            }else{
+                System.out.println("promedio de los números positivos = " + sumaPositivo/contadorDePositivos);
+            }
+            if(contadorDeNegativos == 0){
+                System.out.println("El promedio de los números negativos no se puedo calcular porque su divisor es cero");
+            }else {
+                System.out.println("promedio de los números negativos = " + -(sumaNegativo/contadorDeNegativos));
+            }
             System.out.println("contador de ceros = " + contadorDeCeros);
         } catch (Exception e) {
             System.out.println("Ingrese números enteros");
